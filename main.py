@@ -1,49 +1,59 @@
 import config as CFG
 import time
-from selenium import webdriver
 import os
+import requests
+import logging as logg
 from bs4 import BeautifulSoup
-from urllib.parse import urljoin
-from lib_search import LibrarySearch
 
 
-def extract_urls(url_to_click: str, wait_time: int, pause_time: int):
-    # selenium web scrapper for infinite scrolling page
-    driver = webdriver.Chrome(executable_path=os.path.join(CFG.WEBDRIVER_LOCATION, CFG.WEBDRIVER_NAME))
-    driver.get(url_to_click)
-    time.sleep(wait_time)
-    scroll_pause_time = pause_time
-    screen_height = driver.execute_script("return window.screen.height;")  # get the screen height of the web
-    i = 1
+class BBBScraper:
+    """
+    the only thing that this scraper does outside of the class is to
+    output a file or a database with the scraped data after the set-up is
+    completed
+    """
+    def __init__(self):
+        # all of these flags need to be True before the scrape command is called in the end
+        self._url_is_set = False
+        self.url = ""
 
-    while True:
-        driver.execute_script("window.scrollTo(0, {screen_height}*{i});".format(screen_height=screen_height, i=i))
-        i += 1
-        time.sleep(scroll_pause_time)
-        # update scroll height each time after scrolled, as the scroll height can change after we scrolled the page
+    def set_starting_url(self, url):
+        self._url_is_set = True
+        self.url = url
 
-        scroll_height = driver.execute_script("return document.body.scrollHeight;")
+    def _parse_url(self):
+        _page = requests.get(self.url)
+        return self._read_urls(_page.content)
 
-        # Break the loop when the height we need to scroll to is larger than the total scroll height
-        if (screen_height * i) > scroll_height:
-            break
+    def _read_urls(self, page_content):
+        _soup = BeautifulSoup(page_content, 'html.parser')
+        return _soup
 
-    urls = []
-    soup = BeautifulSoup(driver.page_source, "html.parser")
-    for parent in soup.find_all("h3", class_="item-title"):
-        a_tag = parent.find("a")
-        base = url_to_click
-        link = a_tag.attrs['href']
-        url = urljoin(base, link)
-        urls.append(url)
+    def _read_links_in_page(self, soup):
+        results_main = soup.find_all('div', class_="result-item__main")
+        # TODO: check if the links correctly read to individual company pages
+        links = results_main.find('a')
+        return links
 
-    driver.quit()
-    return urls
+    def _get_categories(self):
+        # TODO: SOMEHOW???
+        pass
+
+    def scrape(self):
+        # TODO: the actual scraping
+        self._read_links_in_page(self._read_urls(self._parse_url))  # TODO: there's probably a better way to do this...
+        pass
+
+    def output(self):
+        # TODO: returns the output in whatever way the user wants it
+        pass
 
 
 def main():
-    url_list = extract_urls(LibrarySearch.get_search_url("HUJI", "amos oz"), 5, 3)
-    print(len(url_list))
+    a = BBBScraper()
+    a.set_starting_url(CFG.STARTING_URL)
+    # TODO: possible other things that can be configured at runtime?
+    a.scrape()
 
 
 if __name__ == "__main__":
