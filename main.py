@@ -5,6 +5,7 @@ import re
 import requests
 import logging as logg
 from bs4 import BeautifulSoup
+import json
 
 
 class BBBScraper:
@@ -104,21 +105,39 @@ class BBBScraper:
     @staticmethod
     def _read_individual_pages(link):
         """
-        returns a dictionary with the business details
+        returns a dictionary with some business details
         """
+        _data = dict()
         _page = requests.get(link + '/details', headers=CFG.USER_AGENT)
         _soup = BeautifulSoup(_page.content, 'html.parser')
         _alerts = _soup.find("section", id="all-alerts")
 
         if _alerts:
-            return _alerts.h6.text
+            _data["Alerts"] = _alerts.h6.text
 
-        _business_details = _soup.find("div", class_='business-details-card__content')
+        _location = _soup.find('div', class_='dtm-address')
+        if _location:
+            _data["Address"] = _location.text
+
+        _phone = _soup.find("a", class_="dtm-phone")
+        if _phone:
+            _data["Phone"] = _phone.text
+
+        _business_details = _soup.find("div", class_='business-details-card')
 
         if not _business_details:
-            raise RuntimeError(f"Bad link passed to _read_individual_pages: {link}")
+            raise RuntimeError(f"No business details found! Bad link passed to _read_individual_pages: {link}")
 
-        return _business_details
+        _table = _business_details.find("table")
+        for row in _table.findAll('tr'):
+            _table_header = row.find('th')
+            _table_detail = row.find('td')
+
+            if _table_header and _table_detail:
+                _data[_table_header.text] = _table_detail.text
+
+        _data['url'] = link
+        return _data
 
     def _check_flags(self):
         """
@@ -143,7 +162,7 @@ class BBBScraper:
             _single_page_link = self._build_search_url(page)
             _company_page_links.extend(self._parse_url(_single_page_link))
 
-        return _company_page_links
+        return [self._read_individual_pages(link) for link in _company_page_links]
 
     def scrape(self):
         """
@@ -153,14 +172,19 @@ class BBBScraper:
         """
         _flags = self._check_flags()
         if _flags:
-            self._scrape_main()
+            self._data_as_list_of_dicts = self._scrape_main()
         else:
             raise RuntimeError(f"Something is not set properly!")
 
-    def output(self, output_format):
+    def output(self, output_format, **kwargs):
         """ user needs to call scrape before calling output """
-        # TODO: returns the output in whatever way the user wants it
-        pass
+        if output_format == "json":
+            _output_filename = kwargs['filename']
+
+            with open(_output_filename, 'w') as f:
+                json.dump(self._data_as_list_of_dicts, f, indent=4, sort_keys=True)
+        else:
+            raise NotImplementedError("Check argument of output call!")
 
 
 def test():
@@ -169,19 +193,24 @@ def test():
     a = BBBScraper()
     a.set_initial_values(url=CFG.STARTING_URL, country=CFG.COUNTRY, category=CFG.STARTING_CATEGORY)
 
-    # example of page that's normal
+    # # example of page that's normal
     # print(a._read_individual_pages('https://www.bbb.org/us/tx/odessa/profile/general-contractor/jamie-merrell-construction-0825-1000148213'))
+    #
+    # # example of page with an alert
+    # print(a._read_individual_pages("https://www.bbb.org/us/ca/san-bernardino/profile/building-contractors/uribe's-general-contractor-1066-13185633"))
+    #
+    # # example of page with lots of info
+    # print(a._read_individual_pages('https://www.bbb.org/us/wa/burien/profile/construction-services/vision-remodeling-construction-corporation-1296-1000064178'))
 
-    # example of page with an alert
-    print(a._read_individual_pages("https://www.bbb.org/us/ca/san-bernardino/profile/building-contractors/uribe's-general-contractor-1066-13185633"))
+    print(a._scrape_main())
 
 
 def main():
     a = BBBScraper()
     a.set_initial_values(url=CFG.STARTING_URL, country=CFG.COUNTRY, category=CFG.STARTING_CATEGORY)
-    # TODO: possible other things that can be configured at runtime?
     a.scrape()
+    a.output('json', filename=os.path.join(CFG.SAVE_TO, CFG.SAVE_AS))
 
 
 if __name__ == "__main__":
-    test()
+    main()

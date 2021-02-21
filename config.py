@@ -7,5 +7,8 @@ CATEGORY_LIST = ['Construction Services', 'Kitchen Remodel', 'Bathroom Remodel',
                  'Roofing Contractors', 'Remodel Contractors', 'Home Improvement',
                  'Siding Contractors', 'Home Additions', 'Remodeling', 'Home Builders']
 
+SAVE_TO = ""
+SAVE_AS = "data.json"
+
 # stuff for requests
 USER_AGENT = {'User-Agent': 'Mozilla/5.0'}
