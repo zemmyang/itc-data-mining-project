@@ -1,5 +1,7 @@
 # Data Mining project!
 
-## Current Issues
-* How to get a full list of all the categories?
-* PEP 8!
+## current problems
+* can't handle apostrophes in the url properly
+
+## Version History
+2021 feb 21 - only scrapes one category
