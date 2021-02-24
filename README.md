@@ -9,3 +9,6 @@
 
 ## Version History
 2021 feb 21 - only scrapes some companies from one category. output only to json
+
+## Credits
+* Social media preview: Photo by Markus Spiske on Unsplash
