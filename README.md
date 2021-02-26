@@ -7,6 +7,9 @@
 * does not check for multiple locations
 * **the entire scraped dataset is stored in memory!**
 
+## setting up the environment
+`conda create --name ENVNAME beautifulsoup4 `
+
 ## Version History
 2021 feb 21 - only scrapes some companies from one category. output only to json
 
