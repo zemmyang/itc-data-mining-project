@@ -1,0 +1,4 @@
+2021-04-02 02:20:56,564-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:77-Bad link passed to _read_company_page!
+2021-04-02 02:25:48,094-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:77-Missing business details for First Home Building & Construction Inc.!
+2021-04-02 02:32:52,932-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:77-Missing business details for First Home Building & Construction Inc.!
+2021-04-02 02:35:05,648-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:77-Missing business details for Helbig Community Development Corporation!

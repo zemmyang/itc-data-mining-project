@@ -1,187 +1,129 @@
-import config as CFG
-import time
-import os
-import re
-import requests
-import logging as logg
-from bs4 import BeautifulSoup
-import json
+from argparse import ArgumentParser
+from getpass import getpass
+import logging
+import sys
+
+from BBBScraper.BBBArgParser import define_required_args, check_passed_args
+from BBBScraper.BBBSitemapReader import BBBSitemapReader
+from BBBScraper.BBBCategoryScraper import BBBCategoryScraper
+from BBBScraper.BBBCompanyFileHandler import BBBCompanyFileHandler
+from BBBScraper.BBBCategoryFileHandler import BBBCategoryFileHandler
+from BBBScraper import internal_config as ICFG
+from BBBScraper import messages as M
+import pymysql
+from os import path
+
+
+__author__ = "Angeleene Ang"
+__version__ = "0.2"
+__email__ = "angeleene.ang@gmail.com"
+__status__ = "Prototype"
 
 
 class BBBScraper:
     """
-    the only thing that this scraper does outside of the class is to
-    output a file or a database with the scraped data after the set-up is
-    completed
+    sets up the arguments, grabs them, and passes them to the relevant classes.
+    also sets up the logger
     """
     def __init__(self):
-        """
-        initializes some of the class variables as well as the scraper flags
-        """
-        # all of these flags need to be True before the scrape command is called in the end
-        self._url_is_set = False
-        self._category_is_set = False
-        self._country_is_set = False
+        """ sets up the parser and logger functions """
+        self.parser = None
+        self.args = None
+        self.log = None
 
-        # initialize some class variables
-        self.url = ""
-        self.search_category = ""
-        self.country = ""
+        try:
+            self._run_program_proper()
+        except Exception as err:
+            print(f"Error: {err}")
 
-    def set_starting_url(self, url):
-        """ one of the setting functions that needs to be called in order to call the scrape command """
-        self._url_is_set = True
-        self.url = url
+    def _run_program_proper(self) -> None:
+        """ moves the program logic away from __init__ for organizational purposes"""
+        self._set_up_parser()
+        self._set_up_logger()
+        self._ask_for_pw_if_type_is_sql()
+        self.log.debug(M.LOG_START_SCRAPER)
 
-    def set_starting_category(self, category: str):
-        self._category_is_set = True
-        self.search_category = category.replace(" ", "%20")
+        self._read_sitemaps()
 
-    def set_country(self, country: str):
-        self._country_is_set = True
-        self.country = country.upper()
+        if self._check_if_arg_is_a_cat():
+            self.log.info(f'{self.args.cats} found! Scraping URLs...')
+            self._set_up_sql_tables()
 
-    def set_initial_values(self, url, country, category):
-        " an alternative to the individual set functions "
-        self._url_is_set = True
-        self._category_is_set = True
-        self._country_is_set = True
-
-        self.url = url
-        self.search_category = category.replace(" ", "%20")
-        self.country = country.upper()
-
-    def _build_search_url(self, page):
-        _full_url = self.url + 'search?find_country=' + self.country + '&find_text=' + \
-                    self.search_category + '&find_type=Category&sort=Relevance&page=' + str(page)
-        return _full_url
-
-    @staticmethod
-    def _get_number_of_pages_in_results(link):
-        """
-        reads a link, looks for the "Page X of Y" pattern where
-        X is current page
-        Y is total number of pages
-        and returns that as a tuple
-
-        :param link: the link where to get the "Page X of Y" pattern
-        :return: a tuple (X, Y)
-        """
-        _page = requests.get(link, headers=CFG.USER_AGENT)
-        _soup = BeautifulSoup(_page.content, 'html.parser')
-        _footer = _soup.footer
-
-        if not _footer:
-            raise RuntimeError("<footer> not found in page")
-
-        _pattern = re.match(r'Page\s\d+\sof\s\d+', _footer.text)
-
-        if not _pattern:
-            raise RuntimeError("Internal error in search results page. Cannot find 'Page X in Y' pattern")
-
-        _pages = re.findall(r'\d+', _pattern.group())
-        return tuple([int(i) for i in _pages])
-
-    @staticmethod
-    def _parse_url(link):
-        """
-        takes a link and grabs the URLs out of it.
-        removes duplicates (does not check for multiple locations)
-
-        :param link: should be page results (i.e., _get_number_of_pages_in_results should return something)
-        :return: a list of all the links in the page
-        """
-        _page = requests.get(link, headers=CFG.USER_AGENT)
-        _soup = BeautifulSoup(_page.content, 'html.parser')
-        _results_main = _soup.find_all('h3', class_="MuiTypography-root")
-
-        if not _results_main:
-            raise RuntimeError(f"Bad link passed to _parse_url: {link}")
-
-        _links = [i.find('a', href=True) for i in _results_main]
-
-        return list(set([i['href'] for i in _links]))
-
-    @staticmethod
-    def _read_individual_pages(link):
-        """
-        returns a dictionary with some business details
-        """
-        _data = dict()
-        _page = requests.get(link + '/details', headers=CFG.USER_AGENT)
-        _soup = BeautifulSoup(_page.content, 'html.parser')
-        _alerts = _soup.find("section", id="all-alerts")
-
-        if _alerts:
-            _data["Alerts"] = _alerts.h6.text
-
-        _location = _soup.find('div', class_='dtm-address')
-        if _location:
-            _data["Address"] = _location.text
-
-        _phone = _soup.find("a", class_="dtm-phone")
-        if _phone:
-            _data["Phone"] = _phone.text
-
-        _business_details = _soup.find("div", class_='business-details-card')
-
-        if not _business_details:
-            raise RuntimeError(f"No business details found! Bad link passed to _read_individual_pages: {link}")
-
-        _table = _business_details.find("table")
-        for row in _table.findAll('tr'):
-            _table_header = row.find('th')
-            _table_detail = row.find('td')
-
-            if _table_header and _table_detail:
-                _data[_table_header.text] = _table_detail.text
-
-        _data['url'] = link
-        return _data
-
-    def _check_flags(self):
-        """
-        if all flags are True, return True
-        if at least one flag is False, return a list of False flags
-        """
-        _flag_list = [self._url_is_set, self._category_is_set, self._country_is_set]
-        if all(_flag_list):
-            return True
+            _cat_scraper = BBBCategoryScraper(self.args, self.log)
+            _bbb_company_filehandler = BBBCompanyFileHandler(_cat_scraper.company_urls, self.args, self.log,
+                                                             password=self.pw, connection=self.connection)
+            _bbb_category_filehandler = BBBCategoryFileHandler(self._cats, self.args, self.log,
+                                                               password=self.pw, connection=self.connection)
+            self.connection.close()
         else:
-            return False
+            self.log.critical(f'{self.args.cats} not found. Exiting...')
+            raise LookupError(f"{self.args.cats} is not in the category list")
 
-    def _scrape_main(self):
+    def _set_up_parser(self) -> None:
         """
-        the actual scraper, but without checking the flags.
-        mostly meant to keep the scrape function cleaner
+        creates an argumentparser object, populates it with the arguments,
+        the parses the args to see if anything is invalid
         """
-        _number_of_pages = self._get_number_of_pages_in_results(self._build_search_url(1))
+        self.parser = ArgumentParser()
+        define_required_args(self.parser)
 
-        _company_page_links = []
-        for page in range(_number_of_pages[0], _number_of_pages[1]):
-            _single_page_link = self._build_search_url(page)
-            _company_page_links.extend(self._parse_url(_single_page_link))
+        self.args = self.parser.parse_args()
+        check_passed_args(self.args)
 
-        return [self._read_individual_pages(link) for link in _company_page_links]
-
-    def scrape(self):
+    def _set_up_logger(self) -> None:
         """
-        performs the actual scraping, but checks the flags first
-        returns nothing, just call the function.
-        to get usable data out, call the output function
+        sets up the logger. if the verbose flag is on in the CLI arguments,
+        the logger also prints output in the terminal
         """
-        _flags = self._check_flags()
-        if _flags:
-            self._data_as_list_of_dicts = self._scrape_main()
-        else:
-            raise RuntimeError(f"Something is not set properly!")
+        self.log = logging.getLogger('bbbscraper')
+        self.log.setLevel(logging.DEBUG)
 
-    def output(self, output_format, **kwargs):
-        """ user needs to call scrape before calling output """
-        if output_format == "json":
-            _output_filename = kwargs['filename']
+        file_handler = logging.FileHandler(self.args.log)
+        file_handler.setLevel(logging.WARNING)
+        file_handler.setFormatter(ICFG.LOG_FORMAT)
+        self.log.addHandler(file_handler)
 
-            with open(_output_filename, 'w') as f:
-                json.dump(self._data_as_list_of_dicts, f, indent=4, sort_keys=True)
-        else:
-            raise NotImplementedError("Check argument of output call!")
+        if self.args.verbose:
+            stream_handler = logging.StreamHandler(sys.stdout)
+            stream_handler.setLevel(logging.DEBUG)
+            stream_handler.setFormatter(ICFG.LOG_FORMAT)
+            self.log.addHandler(stream_handler)
+
+        self.log.debug("Logger set-up")
+
+    def _read_sitemaps(self) -> None:
+        """ reads the sitemap off BBB.org """
+        _sitemap_reader = BBBSitemapReader(location=self.args.loc, get_accredited=self.args.acc)
+        self.log.info(f'Found {_sitemap_reader.get_length_of_categories()} categories')
+        self._cats = _sitemap_reader.get_categories()
+
+    def _check_if_arg_is_a_cat(self) -> bool:
+        """ checks if the input argument is one of the categories """
+        return True if " ".join(self.args.cats) in self._cats else False
+
+    def _ask_for_pw_if_type_is_sql(self) -> None:
+        if self.args.type == "SQL":
+            self.log.debug(M.LOG_ASKING_FOR_SQL_PASSWORD)
+            self.pw = getpass("Please enter SQL database password here: ")
+            # self.pw = ICFG.ZEMMY_PW
+
+            self.connection = pymysql.connect(host=ICFG.SQL_HOST, user=ICFG.SQL_USER,
+                                              passwd=self.pw, db=ICFG.SQL_DB)
+
+    def _set_up_sql_tables(self) -> None:
+        if self.args.type == "SQL":
+            self._cursor = self.connection.cursor()
+            _file = ICFG.BBBORG_SQL_FILE
+
+            if path.isfile(_file) is False:
+                raise FileNotFoundError(M.SQL_FILE_NOT_FOUND_ERROR)
+            else:
+                with open(_file, "r") as f:
+                    _sql_file = f.read().split(';')
+                    self.log.info(M.LOG_READING_SQL_FILE + _file)
+
+                for i in range(len(_sql_file) - 1):
+                    self.log.debug(
+                        f"Executing {(''.join(list(_sql_file[i])[:40])).strip()}")  # shorten the debug output
+                    self._cursor.execute(_sql_file[i])
+                self.connection.commit()
