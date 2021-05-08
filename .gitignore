@@ -1,1 +1,4 @@
 /utils/chromedriver
+YELP API KEY
+*.json
+log.txt

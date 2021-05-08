@@ -10,12 +10,13 @@ from BBBScraper.BBBCompanyFileHandler import BBBCompanyFileHandler
 from BBBScraper.BBBCategoryFileHandler import BBBCategoryFileHandler
 from BBBScraper import internal_config as ICFG
 from BBBScraper import messages as M
+from BBBScraper import logger
 import pymysql
 from os import path
 
 
 __author__ = "Angeleene Ang"
-__version__ = "0.2"
+__version__ = "0.5.0"
 __email__ = "angeleene.ang@gmail.com"
 __status__ = "Prototype"
 
