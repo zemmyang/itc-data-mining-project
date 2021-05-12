@@ -8,6 +8,8 @@ def define_optional_args(parser: ArgumentParser) -> None:
     parser.add_argument("-c", "--config", help=M.CONFIG_HELP)
     parser.add_argument("-l", "--log", help=M.LOG_HELP, default='log.txt')
     parser.add_argument("-t", "--type", type=str, help=M.TYPE_HELP, default='SQL')
+    parser.add_argument('-d', '--default', help=M.DEFAULT_HELP, action="store_true")
+    parser.add_argument('-y', '--yelp', help=M.YELP_HELP, action='store_true')
 
 
 def define_required_args(parser: ArgumentParser) -> None:
@@ -37,7 +39,7 @@ def check_passed_args(args: Namespace) -> None:
     elif args.config:
         raise NotImplementedError(M.CONFIG_NOT_IMPLEMENTED_ERROR)
     else:
-        if len(args.cats) == 0:
+        if not args.default and len(args.cats) == 0:
             raise SyntaxError(M.NO_ALL_FLAG_BUT_NO_CAT_ERROR)
     # check_if_config_is_used(args)
 
@@ -52,3 +54,7 @@ def check_if_config_is_used(args: Namespace) -> None:
 
     else:
         print(M.NO_CONFIG_USED)
+
+
+def assign_defaults():
+    pass

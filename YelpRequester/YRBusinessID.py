@@ -15,6 +15,7 @@ class YRBusinessID:
         self.yelp_requester = YelpRequester()
         self.yelp_requester.logger.debug(M.YRBUSINESSID_INITIALIZING_DEBUG)
         self.kwargs_dict = kwargs
+        self.business_details = dict()
         self._run_search()
 
     def _run_search(self):
@@ -32,6 +33,9 @@ class YRBusinessID:
                 _response = self._business_match_endpoint(name=_kwd['name'], address=_kwd['address'],
                                                           city=_kwd['city'], state=_kwd['state'],
                                                           country=_kwd['country'])
+                if not self.yelp_requester.check_response(_response):
+                    _response = self._business_search_endpoint(name=_kwd['name'],
+                                                               location=f"{_kwd['city']}, {_kwd['state']}")
             elif all(k in _kwd.keys() for k in _keys_to_use_with_business_search):
                 _response = self._business_search_endpoint(name=_kwd['name'], location=_kwd['location'])
             else:
@@ -43,6 +47,20 @@ class YRBusinessID:
             else:
                 self.yelp_requester.logger.warning(M.YRBUSINESSID_NOT_FOUND_WARNING.format(name=_kwd['name']))
                 self.business_id = "Null"
+
+        if self.business_id != "Null":
+            _response = self._business_details_endpoint(business_id=self.business_id)
+
+            self.business_details['business_name'] = _response.json()['name']
+            self.business_details['address'] = _response.json()['location']['address1']
+            self.business_details['coord_lat'] = _response.json()['coordinates']['latitude']
+            self.business_details['coord_long'] = _response.json()['coordinates']['longitude']
+            self.business_details['display_phone'] = _response.json()['display_phone']
+            self.business_details['city'] = _response.json()['location']['city']
+            self.business_details['country'] = _response.json()['location']['country']
+            self.business_details['zipcode'] = _response.json()['location']['zip_code']
+            self.business_details['yelp_url'] = _response.json()['url']
+            self.business_details['yelp_rating'] = _response.json()['rating']
 
     def _make_request(self, path, url_params):
         """ send the actual request """
@@ -83,12 +101,20 @@ class YRBusinessID:
 
         return self._make_request(ICFG.SEARCH_PATH, url_params)
 
+    def _business_details_endpoint(self, business_id):
+        url_params = {
+            'locale': self.yelp_requester.get_locale()
+        }
+        return self._make_request(ICFG.DETAILS_PATH.format(id=business_id), url_params)
+
     def __getitem__(self, item):
         """ returns the data used to make the search """
         if item == "business_id" or item == 'id':
             return self.business_id
         elif item in self.kwargs_dict.keys():
             return self.kwargs_dict[item]
+        elif item in self.business_details.keys():
+            return self.business_details[item]
         else:
             return None
 
@@ -97,7 +123,7 @@ def test():
     yr = YRBusinessID(name='filipino food', location='Los Angeles, CA')
     print(yr['name'], yr['id'])
 
-    another_yr = YRBusinessID(name='aaa')
+    another_yr = YRBusinessID(name='IHOP', address='1190 Arnold Drive', city="Martinez", state='CA', country="US")
     print(another_yr['name'], another_yr['business_id'])
 
 

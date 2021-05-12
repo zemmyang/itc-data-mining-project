@@ -1,45 +1,51 @@
-from argparse import ArgumentParser
+from argparse import ArgumentParser, Namespace
 from getpass import getpass
 import logging
 import sys
 
 from BBBScraper.BBBArgParser import define_required_args, check_passed_args
 from BBBScraper.BBBSitemapReader import BBBSitemapReader
-from BBBScraper.BBBCategoryScraper import BBBCategoryScraper
-from BBBScraper.BBBCompanyFileHandler import BBBCompanyFileHandler
-from BBBScraper.BBBCategoryFileHandler import BBBCategoryFileHandler
+from BBBScraper.BBBScraperInterface import BBBScraperInterface
+from BBBScraper import BBBYRInterface
 from BBBScraper import internal_config as ICFG
 from BBBScraper import messages as M
-from BBBScraper import logger
 import pymysql
 from os import path
 
 
-__author__ = "Angeleene Ang"
-__version__ = "0.5.0"
-__email__ = "angeleene.ang@gmail.com"
-__status__ = "Prototype"
+TESTING = True
 
 
 class BBBScraper:
     """
-    sets up the arguments, grabs them, and passes them to the relevant classes.
-    also sets up the logger
+    reads the arguments, sets up the logger
     """
-    def __init__(self):
+    def __init__(self, **kwargs):
         """ sets up the parser and logger functions """
+        self.kwargs = kwargs
         self.parser = None
         self.args = None
         self.log = None
 
-        try:
+        if TESTING:
+            # the error output is better without the try-except clause but it's not user-friendly
             self._run_program_proper()
-        except Exception as err:
-            print(f"Error: {err}")
+        else:
+            try:
+                self._run_program_proper()
+            except Exception as err:
+                print(f"Error: {err}")
 
     def _run_program_proper(self) -> None:
         """ moves the program logic away from __init__ for organizational purposes"""
-        self._set_up_parser()
+
+        if self.kwargs.keys():
+            #  uses args from BBBScraper instead of the args
+            self._set_kwargs_defaults()
+            self.args = Namespace(**self.kwargs)
+        else:
+            self._set_up_parser()
+
         self._set_up_logger()
         self._ask_for_pw_if_type_is_sql()
         self.log.debug(M.LOG_START_SCRAPER)
@@ -47,18 +53,23 @@ class BBBScraper:
         self._read_sitemaps()
 
         if self._check_if_arg_is_a_cat():
-            self.log.info(f'{self.args.cats} found! Scraping URLs...')
+            self.log.info(M.LOG_CATEGORY_FOUND_DEBUG.format(cats=self.args.cats))
             self._set_up_sql_tables()
 
-            _cat_scraper = BBBCategoryScraper(self.args, self.log)
-            _bbb_company_filehandler = BBBCompanyFileHandler(_cat_scraper.company_urls, self.args, self.log,
-                                                             password=self.pw, connection=self.connection)
-            _bbb_category_filehandler = BBBCategoryFileHandler(self._cats, self.args, self.log,
-                                                               password=self.pw, connection=self.connection)
+            self.scraper_interface = BBBScraperInterface(args=self.args, logger=self.log,
+                                                         cats=self._cats, conn=self.connection,
+                                                         password=self.pw)
+
+            self.scraper_interface.run()
+
+            if self.args.yelp:
+                self.log.info(M.LOG_YELP)
+                BBBYRInterface.connect()
+
             self.connection.close()
         else:
-            self.log.critical(f'{self.args.cats} not found. Exiting...')
-            raise LookupError(f"{self.args.cats} is not in the category list")
+            self.log.critical(M.LOG_CATS_NOT_FOUND.format(self.args.cats))
+            raise LookupError(M.LOG_CATS_NOT_FOUND.format(self.args.cats))
 
     def _set_up_parser(self) -> None:
         """
@@ -70,6 +81,10 @@ class BBBScraper:
 
         self.args = self.parser.parse_args()
         check_passed_args(self.args)
+
+        if self.args.default:
+            self._set_default_args()
+            self.args = Namespace(**self.kwargs)
 
     def _set_up_logger(self) -> None:
         """
@@ -90,12 +105,12 @@ class BBBScraper:
             stream_handler.setFormatter(ICFG.LOG_FORMAT)
             self.log.addHandler(stream_handler)
 
-        self.log.debug("Logger set-up")
+        self.log.debug(M.LOG_LOGGING_SET_UP_DEBUG)
 
     def _read_sitemaps(self) -> None:
         """ reads the sitemap off BBB.org """
         _sitemap_reader = BBBSitemapReader(location=self.args.loc, get_accredited=self.args.acc)
-        self.log.info(f'Found {_sitemap_reader.get_length_of_categories()} categories')
+        self.log.info(M.LOG_SITEMAP_READ_INFO.format(catnum=_sitemap_reader.get_length_of_categories()))
         self._cats = _sitemap_reader.get_categories()
 
     def _check_if_arg_is_a_cat(self) -> bool:
@@ -105,8 +120,11 @@ class BBBScraper:
     def _ask_for_pw_if_type_is_sql(self) -> None:
         if self.args.type == "SQL":
             self.log.debug(M.LOG_ASKING_FOR_SQL_PASSWORD)
-            self.pw = getpass("Please enter SQL database password here: ")
-            # self.pw = ICFG.ZEMMY_PW
+
+            if TESTING:
+                self.pw = ICFG.ZEMMY_PW
+            else:
+                self.pw = getpass(M.ENTER_SQL_PASSWORD)
 
             self.connection = pymysql.connect(host=ICFG.SQL_HOST, user=ICFG.SQL_USER,
                                               passwd=self.pw, db=ICFG.SQL_DB)
@@ -124,7 +142,28 @@ class BBBScraper:
                     self.log.info(M.LOG_READING_SQL_FILE + _file)
 
                 for i in range(len(_sql_file) - 1):
-                    self.log.debug(
-                        f"Executing {(''.join(list(_sql_file[i])[:40])).strip()}")  # shorten the debug output
+                    self.log.debug(M.LOG_EXECUTING_SQL_DEBUG.format(query=''.join(list(_sql_file[i])[:40])).strip())
                     self._cursor.execute(_sql_file[i])
                 self.connection.commit()
+
+    def _set_kwargs_defaults(self) -> None:
+        if 'log' not in self.kwargs.keys():
+            self.kwargs['log'] = 'log.txt'
+        if 'type' not in self.kwargs.keys():
+            self.kwargs['type'] = 'SQL'
+        if 'loc' not in self.kwargs.keys():
+            self.kwargs['loc'] = 'US'
+        if 'acc' not in self.kwargs.keys():
+            self.kwargs['acc'] = False
+        if 'all' not in self.kwargs.keys():
+            self.kwargs['all'] = False
+        if 'verbose' not in self.kwargs.keys():
+            self.kwargs['verbose'] = True
+        if  'yelp' not in self.kwargs.keys():
+            self.kwargs['yelp'] = False
+
+    def _set_default_args(self) -> None:
+        """ for use with the default flag """
+        self.kwargs['cats'] = ['Restaurants']
+
+        self._set_kwargs_defaults()

@@ -1,0 +1,259 @@
+2021-05-08 17:31:17,898-DEBUG-FILE:__init__.py-FUNC:_read_api_key-LINE:23-Reading API key
+2021-05-08 17:31:17,899-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-08 17:31:17,899-DEBUG-FILE:YRBusinessID.py-FUNC:search-LINE:34-Searching for filipino food in Los Angeles, CA
+2021-05-08 17:31:17,899-DEBUG-FILE:YRBusinessID.py-FUNC:make_request-LINE:19-Request made for something
+2021-05-08 17:31:47,693-DEBUG-FILE:__init__.py-FUNC:_read_api_key-LINE:23-Reading API key
+2021-05-08 17:31:47,693-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-08 17:31:47,693-DEBUG-FILE:YRBusinessID.py-FUNC:search-LINE:34-Searching for filipino food in Los Angeles, CA
+2021-05-08 17:31:47,693-DEBUG-FILE:YRBusinessID.py-FUNC:make_request-LINE:19-Request made for something
+2021-05-08 17:46:37,893-DEBUG-FILE:__init__.py-FUNC:_read_api_key-LINE:23-Reading API key
+2021-05-08 17:46:37,893-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:18-YelpRequester BusinessID initialized
+2021-05-08 20:23:19,689-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:23-Reading API key
+2021-05-08 20:23:19,689-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:19-YelpRequester BusinessID initialized
+2021-05-08 20:23:19,689-INFO-FILE:YRBusinessID.py-FUNC:_business_search_endpoint-LINE:91-Running Business Search on filipino food
+2021-05-08 20:23:19,689-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:57-Sending GET request {url}
+2021-05-08 23:14:05,527-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:23-Reading API key
+2021-05-08 23:14:05,528-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:19-YelpRequester BusinessID initialized
+2021-05-08 23:14:05,528-INFO-FILE:YRBusinessID.py-FUNC:_business_search_endpoint-LINE:91-Running Business Search on filipino food
+2021-05-08 23:14:05,528-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:57-Sending GET request
+2021-05-08 23:14:54,558-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:23-Reading API key
+2021-05-08 23:14:54,559-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:19-YelpRequester BusinessID initialized
+2021-05-08 23:14:54,559-INFO-FILE:YRBusinessID.py-FUNC:_business_search_endpoint-LINE:92-Running Business Search on filipino food
+2021-05-08 23:14:54,559-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:58-Sending GET request
+2021-05-08 23:15:58,934-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:23-Reading API key
+2021-05-08 23:15:58,934-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:19-YelpRequester BusinessID initialized
+2021-05-08 23:15:58,934-INFO-FILE:YRBusinessID.py-FUNC:_business_search_endpoint-LINE:92-Running Business Search on filipino food
+2021-05-08 23:15:58,934-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:58-Sending GET request
+2021-05-08 23:16:13,965-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:23-Reading API key
+2021-05-08 23:16:13,966-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:19-YelpRequester BusinessID initialized
+2021-05-08 23:16:13,966-INFO-FILE:YRBusinessID.py-FUNC:_business_search_endpoint-LINE:92-Running Business Search on filipino food
+2021-05-08 23:16:13,966-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:58-Sending GET request
+2021-05-08 23:33:46,247-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:36-Reading API key
+2021-05-08 23:33:46,247-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:19-YelpRequester BusinessID initialized
+2021-05-08 23:33:46,248-INFO-FILE:YRBusinessID.py-FUNC:_business_search_endpoint-LINE:94-Running Business Search on filipino food
+2021-05-08 23:33:46,248-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:60-Sending GET request
+2021-05-09 01:09:43,156-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:49-Obtained API key from yelprequester.json
+2021-05-09 01:09:43,156-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:18-YelpRequester BusinessID initialized
+2021-05-09 01:09:43,156-INFO-FILE:YRBusinessID.py-FUNC:_business_search_endpoint-LINE:87-Running Business Search on filipino food
+2021-05-09 01:09:43,156-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:61-Sending GET request for business ID
+2021-05-09 01:15:29,703-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-09 01:15:29,703-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-09 01:15:29,703-INFO-FILE:YRBusinessID.py-FUNC:_business_search_endpoint-LINE:85-Running Business Search on filipino food
+2021-05-09 01:15:29,703-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:59-Sending GET request for business ID
+2021-05-09 01:15:30,583-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-09 01:15:30,583-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-09 01:15:30,584-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-09 01:15:30,584-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-09 01:15:30,586-WARNING-FILE:YRBusinessID.py-FUNC:_run_search-LINE:44-Business aaa not found using Yelp API. Setting business_id to Null
+2021-05-09 01:15:30,586-WARNING-FILE:YRBusinessID.py-FUNC:_run_search-LINE:44-Business aaa not found using Yelp API. Setting business_id to Null
+2021-05-09 01:21:46,600-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-09 01:21:46,600-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-09 01:21:46,600-INFO-FILE:YRBusinessID.py-FUNC:_business_search_endpoint-LINE:85-Running Business Search on filipino food
+2021-05-09 01:21:46,600-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:59-Sending GET request for business ID
+2021-05-09 01:21:47,417-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-09 01:21:47,417-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-09 01:21:47,417-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-09 01:21:47,417-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-09 01:21:47,420-WARNING-FILE:YRBusinessID.py-FUNC:_run_search-LINE:44-Business aaa not found using Yelp API. Setting business_id to Null
+2021-05-09 01:21:47,420-WARNING-FILE:YRBusinessID.py-FUNC:_run_search-LINE:44-Business aaa not found using Yelp API. Setting business_id to Null
+2021-05-09 01:30:08,239-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-09 01:30:08,240-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-09 01:30:08,240-INFO-FILE:YRBusinessID.py-FUNC:_business_search_endpoint-LINE:85-Running Business Search on filipino food
+2021-05-09 01:30:08,240-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:59-Sending GET request for business ID
+2021-05-09 01:30:09,180-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-09 01:30:09,180-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-09 01:30:09,181-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-09 01:30:09,181-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-09 01:30:09,183-WARNING-FILE:YRBusinessID.py-FUNC:_run_search-LINE:44-Business aaa not found using Yelp API. Setting business_id to Null
+2021-05-09 01:30:09,183-WARNING-FILE:YRBusinessID.py-FUNC:_run_search-LINE:44-Business aaa not found using Yelp API. Setting business_id to Null
+2021-05-09 01:34:27,663-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-09 01:34:27,663-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-09 01:34:27,663-INFO-FILE:YRBusinessID.py-FUNC:_business_search_endpoint-LINE:75-Running Business Search on filipino food
+2021-05-09 01:34:27,663-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:49-Sending GET request for business ID
+2021-05-09 01:34:28,563-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-09 01:34:28,563-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-09 01:34:28,563-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-09 01:34:28,563-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-09 01:34:28,566-WARNING-FILE:YRBusinessID.py-FUNC:_run_search-LINE:44-Business aaa not found using Yelp API. Setting business_id to Null
+2021-05-09 01:34:28,566-WARNING-FILE:YRBusinessID.py-FUNC:_run_search-LINE:44-Business aaa not found using Yelp API. Setting business_id to Null
+2021-05-12 14:04:42,929-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 14:05:32,451-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 14:19:30,345-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 14:20:17,775-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 14:20:17,776-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:21-Starting YRBBBCompanyFileHandler
+2021-05-12 14:30:38,377-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 14:30:54,782-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 14:30:54,782-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:17-Starting YRBBBCompanyFileHandler
+2021-05-12 15:34:43,270-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 15:34:43,270-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:18-Starting YRBBBCompanyFileHandler
+2021-05-12 16:01:15,645-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 16:03:19,867-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 16:03:48,091-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 16:04:39,096-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 16:05:58,639-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 16:06:06,481-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 16:06:16,422-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 16:12:05,510-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 16:12:16,237-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 16:12:26,122-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 16:12:40,092-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 16:13:01,047-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 16:13:57,775-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 16:14:05,828-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 16:14:11,109-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:12:39,581-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:13:07,446-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:13:15,065-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:23:08,647-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:23:21,250-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:23:21,250-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:23:33,204-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:23:33,204-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:23:58,042-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:23:58,042-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:24:52,471-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:24:52,472-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:25:38,104-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:25:38,104-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:27:04,804-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:27:04,804-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:29:20,526-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:29:20,526-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:29:31,625-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:29:31,626-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:29:56,261-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:29:56,261-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:30:00,456-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:30:00,456-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:30:09,478-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:30:09,479-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:31:10,399-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:31:10,399-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:31:26,121-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:31:26,121-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:31:47,082-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:31:47,082-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:32:18,253-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:32:18,254-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:32:39,733-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:32:39,733-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:32:48,014-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:32:48,014-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:33:44,501-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:33:44,502-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:33:54,589-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:33:54,589-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:34:05,344-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:34:05,345-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:34:10,310-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:34:10,310-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:34:33,742-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:34:33,742-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:35:39,919-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:35:39,919-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:36:07,197-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:36:07,197-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:36:12,931-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:36:12,931-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:36:29,109-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:36:29,109-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:36:54,839-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:36:54,839-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:37:13,385-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:37:13,386-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:38:12,592-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:38:12,592-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:38:40,702-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:38:40,702-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:39:04,659-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:39:04,660-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:39:15,083-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:39:15,083-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:39:25,773-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:39:25,773-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:39:41,655-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:39:41,656-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:39:46,367-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:39:46,367-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:41:52,246-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:41:52,246-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:42:25,097-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:42:25,097-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:42:39,670-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:42:39,671-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 17:42:56,554-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 17:42:56,554-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 18:00:38,824-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 18:00:38,824-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 18:00:43,535-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 18:00:43,535-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 18:01:12,587-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 18:01:12,587-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 18:04:14,778-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 18:04:14,778-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 18:05:16,451-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 18:05:16,451-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 18:05:25,762-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 18:05:25,762-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 18:06:05,530-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 18:06:05,530-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 18:06:42,185-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 18:06:42,185-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-12 18:06:42,185-INFO-FILE:YRBusinessID.py-FUNC:_business_search_endpoint-LINE:75-Running Business Search on filipino food
+2021-05-12 18:06:42,185-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:49-Sending GET request for business ID
+2021-05-12 18:06:43,278-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 18:06:43,278-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 18:06:43,279-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-12 18:06:43,279-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-12 18:06:43,281-WARNING-FILE:YRBusinessID.py-FUNC:_run_search-LINE:44-Business Sabor De Minas Restaurant not found using Yelp API. Setting business_id to Null
+2021-05-12 18:06:43,281-WARNING-FILE:YRBusinessID.py-FUNC:_run_search-LINE:44-Business Sabor De Minas Restaurant not found using Yelp API. Setting business_id to Null
+2021-05-12 18:07:32,048-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 18:07:32,048-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-12 18:07:32,048-INFO-FILE:YRBusinessID.py-FUNC:_business_search_endpoint-LINE:75-Running Business Search on filipino food
+2021-05-12 18:07:32,048-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:49-Sending GET request for business ID
+2021-05-12 18:07:32,768-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 18:07:32,768-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 18:07:32,768-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-12 18:07:32,768-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-12 18:07:32,769-INFO-FILE:YRBusinessID.py-FUNC:_business_match_endpoint-LINE:61-Running Business Match on Sabor De Minas Restaurant
+2021-05-12 18:07:32,769-INFO-FILE:YRBusinessID.py-FUNC:_business_match_endpoint-LINE:61-Running Business Match on Sabor De Minas Restaurant
+2021-05-12 18:07:32,769-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:49-Sending GET request for business ID
+2021-05-12 18:07:32,769-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:49-Sending GET request for business ID
+2021-05-12 18:07:33,756-WARNING-FILE:YRBusinessID.py-FUNC:_run_search-LINE:44-Business Sabor De Minas Restaurant not found using Yelp API. Setting business_id to Null
+2021-05-12 18:07:33,756-WARNING-FILE:YRBusinessID.py-FUNC:_run_search-LINE:44-Business Sabor De Minas Restaurant not found using Yelp API. Setting business_id to Null
+2021-05-12 18:08:48,003-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 18:08:48,003-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-12 18:08:48,003-INFO-FILE:YRBusinessID.py-FUNC:_business_search_endpoint-LINE:77-Running Business Search on filipino food
+2021-05-12 18:08:48,003-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:51-Sending GET request for business ID
+2021-05-12 18:08:48,860-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 18:08:48,860-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 18:08:48,861-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-12 18:08:48,861-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-12 18:08:48,862-INFO-FILE:YRBusinessID.py-FUNC:_business_match_endpoint-LINE:63-Running Business Match on Sabor De Minas Restaurant
+2021-05-12 18:08:48,862-INFO-FILE:YRBusinessID.py-FUNC:_business_match_endpoint-LINE:63-Running Business Match on Sabor De Minas Restaurant
+2021-05-12 18:08:48,863-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:51-Sending GET request for business ID
+2021-05-12 18:08:48,863-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:51-Sending GET request for business ID
+2021-05-12 18:08:49,326-INFO-FILE:YRBusinessID.py-FUNC:_business_search_endpoint-LINE:77-Running Business Search on Sabor De Minas Restaurant
+2021-05-12 18:08:49,326-INFO-FILE:YRBusinessID.py-FUNC:_business_search_endpoint-LINE:77-Running Business Search on Sabor De Minas Restaurant
+2021-05-12 18:08:49,327-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:51-Sending GET request for business ID
+2021-05-12 18:08:49,327-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:51-Sending GET request for business ID
+2021-05-12 18:10:48,070-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 18:10:48,070-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 18:11:11,173-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 18:11:11,173-INFO-FILE:YRBBBCompanyFileHandler.py-FUNC:run-LINE:20-Starting YRBBBCompanyFileHandler
+2021-05-12 18:11:27,329-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 18:11:27,329-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-12 18:11:27,329-INFO-FILE:YRBusinessID.py-FUNC:_business_search_endpoint-LINE:78-Running Business Search on filipino food
+2021-05-12 18:11:27,329-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:52-Sending GET request for business ID
+2021-05-12 18:11:28,330-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 18:11:28,330-DEBUG-FILE:__init__.py-FUNC:_read_config_file-LINE:50-Obtained API key from yelprequester.json
+2021-05-12 18:11:28,331-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-12 18:11:28,331-DEBUG-FILE:YRBusinessID.py-FUNC:__init__-LINE:16-YelpRequester BusinessID initialized
+2021-05-12 18:11:28,331-INFO-FILE:YRBusinessID.py-FUNC:_business_match_endpoint-LINE:64-Running Business Match on IHOP
+2021-05-12 18:11:28,331-INFO-FILE:YRBusinessID.py-FUNC:_business_match_endpoint-LINE:64-Running Business Match on IHOP
+2021-05-12 18:11:28,331-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:52-Sending GET request for business ID
+2021-05-12 18:11:28,331-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:52-Sending GET request for business ID
+2021-05-12 18:11:28,865-INFO-FILE:YRBusinessID.py-FUNC:_business_search_endpoint-LINE:78-Running Business Search on IHOP
+2021-05-12 18:11:28,865-INFO-FILE:YRBusinessID.py-FUNC:_business_search_endpoint-LINE:78-Running Business Search on IHOP
+2021-05-12 18:11:28,866-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:52-Sending GET request for business ID
+2021-05-12 18:11:28,866-DEBUG-FILE:YRBusinessID.py-FUNC:_make_request-LINE:52-Sending GET request for business ID

@@ -38,7 +38,7 @@ class YelpRequester:
         it should be in the same directory as main.py
         """
         try:
-            with open(os.path.join(os.path.dirname(os.getcwd()), ICFG.YELPREQUESTER_CONFIG_FILE)) as f:
+            with open(ICFG.YELPREQUESTER_CONFIG_FILE) as f:
                 self.config_file = json.load(f)
         except FileNotFoundError:
             self.logger.critical(M.YELPREQUESTER_CONFIG_FILE_CRITICAL)
@@ -68,6 +68,12 @@ class YelpRequester:
 
     def get_locale(self) -> str:
         return self.config_file['locale']
+
+    def get_country(self) -> str:
+        return self.config_file['country']
+
+    def get_sql_credentials(self) -> dict:
+        return {key: self.config_file[key] for key in ['sql_db', 'sql_host', 'sql_user', 'sql_password']}
 
     @staticmethod
     def return_fake_request():

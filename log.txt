@@ -3,3 +3,268 @@
 2021-04-02 02:32:52,932-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:77-Missing business details for First Home Building & Construction Inc.!
 2021-04-02 02:35:05,648-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:77-Missing business details for Helbig Community Development Corporation!
 2021-04-28 22:51:37,527-CRITICAL-FILE:__init__.py-FUNC:_run_program_proper-LINE:59-['cats', 'Restaurants'] not found. Exiting...
+2021-05-12 12:27:06,945-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:90-Missing business details for Engine House Pizza!
+2021-05-12 12:35:59,959-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:90-Missing business details for Green Apple Mediterranean!
+2021-05-12 12:37:38,051-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:90-Missing business details for Steve's Diner!
+2021-05-12 12:40:33,471-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:90-Missing business details for Beta Burger!
+2021-05-12 14:55:04,805-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:90-Missing business details for Popeyes!
+2021-05-12 14:55:07,671-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:90-Missing business details for Popeye's Louisiana Kitchen # 2054!
+2021-05-12 14:55:11,761-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:90-Missing business details for Cafe Lucca!
+2021-05-12 14:55:34,398-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:90-Missing business details for Del Taco!
+2021-05-12 14:55:41,849-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:90-Missing business details for The Keg Steakhouse and Bar!
+2021-05-12 14:55:44,638-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:90-Missing business details for Buster's on the Lake!
+2021-05-12 14:55:45,870-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:90-Missing business details for Ichi Ban Japanese Restaurant and Sushi!
+2021-05-12 14:56:13,310-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:90-Missing business details for Blue Dog Kitchen!
+2021-05-12 14:56:16,057-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:90-Missing business details for Blue Water Bar & Grill!
+2021-05-12 14:56:30,309-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:90-Missing business details for Popeyes!
+2021-05-12 14:56:50,964-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:90-Missing business details for Steve's Diner!
+2021-05-12 14:56:54,066-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:90-Missing business details for Huddle House Stores # 460!
+2021-05-12 14:56:55,192-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:90-Missing business details for KFC/Taco Bell!
+2021-05-12 14:59:23,228-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:90-Missing business details for Popeyes!
+2021-05-12 14:59:29,203-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:90-Missing business details for Popeye's!
+2021-05-12 14:59:36,780-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:90-Missing business details for Capital Blues Restaurant!
+2021-05-12 14:59:47,730-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:90-Missing business details for Artie's Place!
+2021-05-12 21:00:26,859-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Budare Grill!
+2021-05-12 21:00:45,811-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Elephant Bar Restaurant!
+2021-05-12 21:00:48,876-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Del Taco!
+2021-05-12 21:00:53,894-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Del Taco!
+2021-05-12 21:01:01,472-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Buster's on the Lake!
+2021-05-12 21:01:09,552-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Buffalo Wild Wings!
+2021-05-12 21:01:33,639-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Blue Water Bar & Grill!
+2021-05-12 21:01:44,168-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Lancaster Wings, Inc.!
+2021-05-12 21:01:45,302-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Jersey Mike's Subs!
+2021-05-12 21:01:51,242-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for McDonald's!
+2021-05-12 21:01:52,262-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeye's!
+2021-05-12 21:01:53,081-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeye's!
+2021-05-12 21:02:01,170-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:02:02,400-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes Chicken!
+2021-05-12 21:02:15,375-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes Chicken!
+2021-05-12 21:02:16,557-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Dairy Queen!
+2021-05-12 21:04:20,931-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:04:22,178-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:04:32,640-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeye's!
+2021-05-12 21:04:36,103-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:04:43,887-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes Chicken!
+2021-05-12 21:04:45,114-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeye's!
+2021-05-12 21:04:49,720-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Artie's Place!
+2021-05-12 21:04:55,864-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for K Town Chicken!
+2021-05-12 21:04:58,437-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Robinwood Cafe!
+2021-05-12 21:11:22,124-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:11:26,316-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for BARI!
+2021-05-12 21:11:32,360-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Green Apple Mediterranean!
+2021-05-12 21:11:43,110-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Kam's Cuisine!
+2021-05-12 21:11:47,722-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Del Taco!
+2021-05-12 21:11:48,951-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Del Taco!
+2021-05-12 21:11:52,298-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Del Taco!
+2021-05-12 21:12:34,185-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Blue Dog Kitchen!
+2021-05-12 21:12:35,339-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Blue Water Bar & Grill!
+2021-05-12 21:12:49,983-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Lancaster Wings, Inc.!
+2021-05-12 21:13:08,319-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for popeye's chicken!
+2021-05-12 21:13:19,167-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Steve's Diner!
+2021-05-12 21:15:49,595-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:16:00,037-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:16:04,009-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Capital Blues Restaurant!
+2021-05-12 21:16:08,305-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes Chicken!
+2021-05-12 21:16:09,562-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeye's!
+2021-05-12 21:16:10,686-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Double Dragon Inn!
+2021-05-12 21:16:11,907-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Double Dragon Inn!
+2021-05-12 21:23:02,915-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:23:14,527-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Green Apple Mediterranean!
+2021-05-12 21:23:17,391-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for On The Border Mexican Grill!
+2021-05-12 21:23:40,332-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Thai Rama Restuarant!
+2021-05-12 21:23:41,660-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for The Keg Steakhouse and Bar!
+2021-05-12 21:23:46,268-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Ichi Ban Japanese Restaurant and Sushi!
+2021-05-12 21:23:47,221-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Bavarian Point Restaurant!
+2021-05-12 21:23:48,418-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Sun Asian Kitchen!
+2021-05-12 21:24:00,399-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Applebee's Neighborhood Grill & Bar!
+2021-05-12 21:24:11,356-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for U S A Subs & Grill!
+2021-05-12 21:24:12,501-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Blue Dog Kitchen!
+2021-05-12 21:24:26,204-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Lancaster Wings, Inc.!
+2021-05-12 21:24:31,938-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:24:52,500-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Plantation Inn!
+2021-05-12 21:24:53,602-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Steve's Diner!
+2021-05-12 21:27:21,642-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:27:22,704-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:27:26,941-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:27:34,727-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:27:35,953-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:27:40,764-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for popeyes chicken!
+2021-05-12 21:27:41,994-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:27:59,912-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Robinwood Cafe!
+2021-05-12 21:28:02,498-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Sultana's!
+2021-05-12 21:28:10,152-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Reform Commission 42!
+2021-05-12 21:33:12,500-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Engine House Pizza!
+2021-05-12 21:33:35,880-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Elephant Bar Restaurant!
+2021-05-12 21:33:37,017-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Del Taco!
+2021-05-12 21:33:48,588-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for The Keg Steakhouse and Bar!
+2021-05-12 21:33:49,407-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Two Guys Pasta & Pizza!
+2021-05-12 21:33:50,209-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Buster's on the Lake!
+2021-05-12 21:33:52,933-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Bavarian Point Restaurant!
+2021-05-12 21:34:35,283-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Lancaster Wings, Inc.!
+2021-05-12 21:34:38,017-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Jersey Mike's Subs!
+2021-05-12 21:34:39,277-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:34:40,505-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:34:51,744-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for popeye's chicken!
+2021-05-12 21:34:54,330-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:35:03,238-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Huddle House Stores # 460!
+2021-05-12 21:35:10,532-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Dairy Queen!
+2021-05-12 21:37:45,442-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:37:48,206-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Capital Blues Restaurant!
+2021-05-12 21:37:50,766-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:38:00,389-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Big A!
+2021-05-12 21:38:01,618-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Beta Burger!
+2021-05-12 21:38:06,023-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Thai Spice!
+2021-05-12 21:38:07,457-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Robinwood Cafe!
+2021-05-12 21:43:48,962-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Green Apple Mediterranean!
+2021-05-12 21:43:59,510-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Minutello's Restaurant!
+2021-05-12 21:44:03,917-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Elephant Bar Restaurant!
+2021-05-12 21:44:05,136-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Del Taco!
+2021-05-12 21:44:06,243-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Del Taco!
+2021-05-12 21:44:09,342-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Del Taco!
+2021-05-12 21:44:17,409-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Two Guys Pasta & Pizza!
+2021-05-12 21:44:20,402-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Ichi Ban Japanese Restaurant and Sushi!
+2021-05-12 21:44:30,232-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Uno Chicago Grill & Pizzeria!
+2021-05-12 21:44:31,461-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Applebee's Neighborhood Grill & Bar!
+2021-05-12 21:44:43,914-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:44:46,270-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Blue Dog Kitchen!
+2021-05-12 21:48:11,208-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:48:15,301-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for popeyes chicken!
+2021-05-12 21:48:16,336-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:48:22,720-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Double Dragon Inn!
+2021-05-12 21:48:30,583-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for K Town Chicken!
+2021-05-12 21:48:34,095-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Laz Cafe!
+2021-05-12 21:48:34,787-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Sultana's!
+2021-05-12 21:52:09,906-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Engine House Pizza!
+2021-05-12 21:52:32,436-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Kam's Cuisine!
+2021-05-12 21:52:36,636-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Del Taco!
+2021-05-12 21:52:42,668-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Del Taco!
+2021-05-12 21:52:47,284-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for The Keg Steakhouse and Bar!
+2021-05-12 21:52:52,829-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Bavarian Point Restaurant!
+2021-05-12 21:52:56,500-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Village Inn!
+2021-05-12 21:52:58,856-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Buffalo Wild Wings!
+2021-05-12 21:53:07,560-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Applebee's Neighborhood Grill & Bar!
+2021-05-12 21:53:22,586-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Blue Water Bar & Grill!
+2021-05-12 21:53:43,197-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes Louisiana Kitchen!
+2021-05-12 21:53:55,585-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:54:07,055-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Huddle House Stores # 460!
+2021-05-12 21:54:11,351-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes Chicken!
+2021-05-12 21:56:47,899-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeye's!
+2021-05-12 21:56:50,433-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 21:56:54,713-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for popeyes chicken!
+2021-05-12 21:56:57,440-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes Chicken!
+2021-05-12 21:56:58,678-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeye's!
+2021-05-12 21:57:01,543-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Double Dragon Inn!
+2021-05-12 21:57:02,568-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Artie's Place!
+2021-05-12 21:57:03,686-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Big A!
+2021-05-12 22:01:09,967-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Budare Grill!
+2021-05-12 22:01:14,662-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Green Apple Mediterranean!
+2021-05-12 22:01:33,523-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Del Taco!
+2021-05-12 22:01:34,681-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Del Taco!
+2021-05-12 22:01:37,718-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Del Taco!
+2021-05-12 22:01:50,316-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Sun Asian Kitchen!
+2021-05-12 22:02:18,479-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Blue Water Bar & Grill!
+2021-05-12 22:02:34,292-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 22:02:41,048-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeye's!
+2021-05-12 22:02:43,682-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeye's!
+2021-05-12 22:02:55,920-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Steve's Diner!
+2021-05-12 22:02:58,719-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for KFC/Taco Bell!
+2021-05-12 22:05:38,567-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeye's!
+2021-05-12 22:05:51,776-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeye's!
+2021-05-12 22:05:59,660-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Beta Burger!
+2021-05-12 22:06:09,286-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Sultana's!
+2021-05-12 22:06:16,965-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Reform Commission 42!
+2021-05-12 22:10:26,208-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Budare Grill!
+2021-05-12 22:10:27,430-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Cafe Lucca!
+2021-05-12 22:10:47,099-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Del Taco!
+2021-05-12 22:10:51,607-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Del Taco!
+2021-05-12 22:11:02,831-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Ichi Ban Japanese Restaurant and Sushi!
+2021-05-12 22:11:08,913-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Buffalo Wild Wings!
+2021-05-12 22:11:13,212-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Applebee's Neighborhood Grill & Bar!
+2021-05-12 22:11:14,448-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Applebee's Neighborhood Grill & Bar!
+2021-05-12 22:11:32,789-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Blue Water Bar & Grill!
+2021-05-12 22:11:43,932-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Lancaster Wings, Inc.!
+2021-05-12 22:11:45,136-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Jersey Mike's Subs!
+2021-05-12 22:11:52,432-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for McDonald's!
+2021-05-12 22:11:53,461-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeye's!
+2021-05-12 22:12:02,828-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 22:12:18,134-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes Chicken!
+2021-05-12 22:14:44,379-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 22:14:51,400-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 22:15:04,116-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Double Dragon Inn!
+2021-05-12 22:15:09,141-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Big A!
+2021-05-12 22:15:15,082-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Thai Spice!
+2021-05-12 22:15:16,208-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Robinwood Cafe!
+2021-05-12 22:15:17,435-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Laz Cafe!
+2021-05-12 22:15:20,203-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Twin Peaks!
+2021-05-12 22:21:07,547-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeye's Louisiana Kitchen # 2054!
+2021-05-12 22:21:11,632-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Cafe Lucca!
+2021-05-12 22:21:17,683-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for On The Border Mexican Grill!
+2021-05-12 22:21:28,437-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Elephant Bar Restaurant!
+2021-05-12 22:21:32,674-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Del Taco!
+2021-05-12 22:21:33,625-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Del Taco!
+2021-05-12 22:21:44,615-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Ichi Ban Japanese Restaurant and Sushi!
+2021-05-12 22:21:45,710-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Bavarian Point Restaurant!
+2021-05-12 22:21:48,610-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Village Inn!
+2021-05-12 22:21:49,702-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Buffalo Wild Wings!
+2021-05-12 22:22:13,563-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Blue Water Bar & Grill!
+2021-05-12 22:22:26,061-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Jersey Mike's Subs!
+2021-05-12 22:22:28,852-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 22:22:29,789-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes Louisiana Kitchen!
+2021-05-12 22:22:39,187-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for popeye's chicken!
+2021-05-12 22:22:57,217-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes Chicken!
+2021-05-12 22:22:58,447-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Dairy Queen!
+2021-05-12 22:25:20,753-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 22:25:23,650-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 22:25:32,457-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 22:25:54,265-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Lee Chen's Restaurant!
+2021-05-12 22:25:57,133-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Thai Spice!
+2021-05-12 22:26:00,104-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Laz Cafe!
+2021-05-12 22:26:03,065-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Twin Peaks!
+2021-05-12 22:30:37,864-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 22:30:38,632-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Engine House Pizza!
+2021-05-12 22:30:41,505-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for BARI!
+2021-05-12 22:30:42,460-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Budare Grill!
+2021-05-12 22:30:56,571-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Minutello's Restaurant!
+2021-05-12 22:31:15,176-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Thai Rama Restuarant!
+2021-05-12 22:31:31,168-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Uno Chicago Grill & Pizzeria!
+2021-05-12 22:31:32,294-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Applebee's Neighborhood Grill & Bar!
+2021-05-12 22:31:46,219-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for U S A Subs & Grill!
+2021-05-12 22:31:49,190-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Blue Water Bar & Grill!
+2021-05-12 22:31:50,417-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Blue Water Bar & Grill!
+2021-05-12 22:31:59,829-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Lancaster Wings, Inc.!
+2021-05-12 22:32:00,840-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Lancaster Wings, Inc.!
+2021-05-12 22:32:03,629-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 22:32:14,789-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeye's!
+2021-05-12 22:32:20,523-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 22:32:21,595-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes Chicken!
+2021-05-12 22:35:01,600-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 22:35:06,208-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 22:35:20,136-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Capital Blues Restaurant!
+2021-05-12 22:35:24,538-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes Chicken!
+2021-05-12 22:35:25,768-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeye's!
+2021-05-12 22:35:28,939-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Double Dragon Inn!
+2021-05-12 22:35:35,288-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Lee Chen's Restaurant!
+2021-05-12 22:35:38,361-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Thai Spice!
+2021-05-12 22:35:39,492-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Robinwood Cafe!
+2021-05-12 22:35:40,510-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Laz Cafe!
+2021-05-12 22:38:30,703-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeye's Louisiana Kitchen # 2054!
+2021-05-12 22:38:33,466-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Budare Grill!
+2021-05-12 22:38:34,694-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Cafe Lucca!
+2021-05-12 22:38:56,304-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Del Taco!
+2021-05-12 22:39:04,191-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Thai Rama Restuarant!
+2021-05-12 22:39:05,282-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for The Keg Steakhouse and Bar!
+2021-05-12 22:39:06,543-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Two Guys Pasta & Pizza!
+2021-05-12 22:39:10,026-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Ichi Ban Japanese Restaurant and Sushi!
+2021-05-12 22:39:16,578-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Buffalo Wild Wings!
+2021-05-12 22:39:23,848-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Applebee's Neighborhood Grill & Bar!
+2021-05-12 22:39:50,780-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Lancaster Wings, Inc.!
+2021-05-12 22:40:00,406-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeye's!
+2021-05-12 22:40:01,533-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeye's!
+2021-05-12 22:40:19,252-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Huddle House Stores # 460!
+2021-05-12 22:40:25,392-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Dairy Queen!
+2021-05-12 22:42:50,063-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 22:42:51,108-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeye's Chicken!
+2021-05-12 22:42:53,465-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 22:43:01,656-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeyes!
+2021-05-12 22:43:12,673-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Popeye's!
+2021-05-12 22:43:29,609-ERROR-FILE:BBBCompanyScraper.py-FUNC:_read_company_page-LINE:89-Missing business details for Sultana's!

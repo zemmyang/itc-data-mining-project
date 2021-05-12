@@ -1,11 +1,12 @@
 YELPREQUESTER_CONFIG_FILE = 'yelprequester.json'
 YELPREQUESTER_LOG_FILE = "yelprequester.log"
+YELPREQUESTER_SQL_FILE = 'yrbbborg.sql'
 
 API_KEY = None
 STARTING_URL = 'https://api.yelp.com'
 SEARCH_PATH = '/v3/businesses/search'
 BUSINESS_PATH = '/v3/businesses/'
-REVIEW_PATH = 'v3/businesses/{business_id}/reviews'
+DETAILS_PATH = '/v3/businesses/{id}'
 
 LOG_FORMAT = '%(asctime)s-%(levelname)s-FILE:%(filename)s-FUNC:%(funcName)s-LINE:%(lineno)d-%(message)s'
 
@@ -29,3 +30,13 @@ HEADERS = [{
     'accept-language': 'en-US,en;q=0.9'
 }
 ]
+
+# regex
+REGEX_STATE_AND_ZIP = r'(.. \d+-\d+)|(.. \d+)$'
+REGEX_CITY_AND_STATE = r'(, \w+, ..)|(, \w+ , ..)'
+
+# sql
+SQL_INSERT_YELP_ID = """
+INSERT INTO `yelp_business_id` (yelp_id, business_name, address, coord_lat, coord_long, display_phone, city, country, zipcode, yelp_url, yelp_rating)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+"""

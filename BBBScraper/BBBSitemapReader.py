@@ -37,7 +37,7 @@ class BBBSitemapReader:
         """ uses the result from _get_category_sitemap to get the urls of the categories """
         return self._scrape_sitemap_pages(self._get_category_sitemap())
 
-    def _read_categories_from_sitemaps(self):
+    def _read_categories_from_sitemaps(self) -> list:
         """
         uses the results from _read_urls_from_sitemap_link, and cleans up the names of
         the categories from the URLs. makes it easier to compare it with the

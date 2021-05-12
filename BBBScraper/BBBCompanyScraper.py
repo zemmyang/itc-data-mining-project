@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 import requests
 import random as r
 import logging
-import re
 from argparse import Namespace
 
 
@@ -36,7 +35,7 @@ class BBBCompanyScraper:
         # business_name VARCHAR(100) NOT NULL,
         _data["Name"] = self.company_name
 
-        # check if it's a charity
+        # check if it's a charity. the scraper is not designed to handle these
         _title = _soup.find("title")
         if "Charity" in _title.text:
             _data["Alerts"] = None
@@ -57,9 +56,9 @@ class BBBCompanyScraper:
             _data["Alerts"] = None
 
         # location VARCHAR(400) NULL,
-        _location = _soup.find('div', class_='dtm-address')
+        _location = _soup.find('span', class_='dtm-address')
         if _location:
-            _data["Address"] = _location.text
+            _data["Address"] = _location.text.strip("Location of This Business")
         else:
             _data["Address"] = None
 
@@ -88,6 +87,8 @@ class BBBCompanyScraper:
 
         if not _business_details:
             self.log.error(f"Missing business details for {self.company_name}!")
+            _data["BBB File Opened"] = None
+            _data["Type of Entity"] = None
             return _data
 
         _table = _business_details.find("table")

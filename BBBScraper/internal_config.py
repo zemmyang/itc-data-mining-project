@@ -1,3 +1,10 @@
+import logging
+
+
+LOG_FORMAT = \
+    logging.Formatter('%(asctime)s-%(levelname)s-FILE:%(filename)s-FUNC:%(funcName)s-LINE:%(lineno)d-%(message)s')
+
+
 # constants
 
 STARTING_URL = 'https://www.bbb.org/'
@@ -34,7 +41,7 @@ HEADERS = [{
 
 BS4_HTML_PARSER = 'html.parser'
 
-# ZEMMY_PW = a
+ZEMMY_PW = 'd4rth!x3mnas'
 
 SQL_INSERT_BUSINESS_PROFILE = """
 INSERT INTO `business_profile` (business_name, alerts, location, website, phone_number, bbb_file_opened, type_of_entity, bbb_rating)

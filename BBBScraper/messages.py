@@ -1,8 +1,12 @@
+ENTER_SQL_PASSWORD = "Please enter SQL database password here: "
+
 # Argparser help
 VERBOSE_HELP = "Makes output verbose (outputs debug log in terminal)"
 CONFIG_HELP = "Uses a config.json file instead of passing arguments"
 LOG_HELP = 'Print out warnings to utils log file (logs to log.txt by default'
 TYPE_HELP = 'Save to utils different file type (Default: SQL)'
+DEFAULT_HELP = 'Use some defaults (Scrapes Restaurants)'
+YELP_HELP = "Uses YelpRequester to scrape additional information and reviews about a company"
 
 CATS_HELP = 'Categories to scrape (spaces are fine, but the CLI works for only one category per run. ' \
             'Use the config file for more)'
@@ -21,6 +25,13 @@ LOG_READING_SQL_FILE = "Reading SQL file..."
 LOG_SAVING_COMPANIES_TO_FILE = "Saving companies to file..."
 LOG_SAVING_CATEGORIES_TO_FILE = "Saving categories to file..."
 LOG_COMMIT_EXECUTE = "Committing executions..."
+LOG_YELP = "Also scraping information from YELP."
+
+LOG_CATEGORY_FOUND_DEBUG = '{cats} found! Scraping URLs...'
+LOG_CATS_NOT_FOUND = '{cats} not found. Exiting...'
+LOG_LOGGING_SET_UP_DEBUG = "Logger set-up"
+LOG_SITEMAP_READ_INFO = 'Found {catnum} categories'
+LOG_EXECUTING_SQL_DEBUG = "Executing {query}"
 
 # Error Messages
 NO_ALL_FLAG_BUT_NO_CAT_ERROR = "Please provide a category to scrape."

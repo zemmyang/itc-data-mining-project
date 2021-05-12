@@ -7,6 +7,15 @@ usage:
     BBBScraper()
 """
 
+
 from BBBScraper import BBBScraper
 
-BBBScraper()
+
+__author__ = "Angeleene Ang"
+__version__ = "0.5.0"
+__email__ = "angeleene.ang@gmail.com"
+__status__ = "Prototype"
+
+BBBScraper(cats=['Restaurants'], verbose=True, yelp=True)
+
+# BBBScraper()
