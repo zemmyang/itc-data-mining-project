@@ -7,6 +7,7 @@ LOG_HELP = 'Print out warnings to utils log file (logs to log.txt by default'
 TYPE_HELP = 'Save to utils different file type (Default: SQL)'
 DEFAULT_HELP = 'Use some defaults (Scrapes Restaurants)'
 YELP_HELP = "Uses YelpRequester to scrape additional information and reviews about a company"
+CONTINUOUS_HELP = "Does not create new tables, tries to update whenever possible"
 
 CATS_HELP = 'Categories to scrape (spaces are fine, but the CLI works for only one category per run. ' \
             'Use the config file for more)'

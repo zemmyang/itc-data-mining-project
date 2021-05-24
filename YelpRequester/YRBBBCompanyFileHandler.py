@@ -76,7 +76,9 @@ class YRBBBCompanyFileHandler:
     def _append_yelp_details(self):
         _cursor = self.connection.cursor()
 
-        for item in self.bbb_company_table.to_dict():
+        for item in self.bbb_company_table:
+            print(item)
+            print(type(item))
             print(self.bbb_company_table[item])
             print(type(self.bbb_company_table[item]))
             _yr_business_id = YRBusinessID(name=item["business_name"], address=item["address"], city=item["city"],

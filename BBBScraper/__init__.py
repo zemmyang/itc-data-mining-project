@@ -2,6 +2,7 @@ from argparse import ArgumentParser, Namespace
 from getpass import getpass
 import logging
 import sys
+from os import path
 
 from BBBScraper.BBBArgParser import define_required_args, check_passed_args
 from BBBScraper.BBBSitemapReader import BBBSitemapReader
@@ -9,9 +10,7 @@ from BBBScraper.BBBScraperInterface import BBBScraperInterface
 from BBBScraper import BBBYRInterface
 from BBBScraper import internal_config as ICFG
 from BBBScraper import messages as M
-import pymysql
-from os import path
-
+from BBBScraper import BBBSQLSetup
 
 TESTING = True
 
@@ -23,12 +22,11 @@ class BBBScraper:
     def __init__(self, **kwargs):
         """ sets up the parser and logger functions """
         self.kwargs = kwargs
-        self.parser = None
-        self.args = None
-        self.log = None
 
-        if TESTING:
-            # the error output is better without the try-except clause but it's not user-friendly
+        if TESTING: # the error output looks better without the try-except clause but it's not user-friendly
+            BBBSQLSetup.clear_schema()
+            print("Dropping BBBOrg schema for testing")
+            self._check_args_or_kwargs()
             self._run_program_proper()
         else:
             try:
@@ -36,29 +34,37 @@ class BBBScraper:
             except Exception as err:
                 print(f"Error: {err}")
 
-    def _run_program_proper(self) -> None:
-        """ moves the program logic away from __init__ for organizational purposes"""
-
+    def _check_args_or_kwargs(self):
         if self.kwargs.keys():
             #  uses args from BBBScraper instead of the args
-            self._set_kwargs_defaults()
+            if 'default' in self.kwargs.keys() and self.kwargs['default']:
+                self._set_default_args()
+            else:
+                self._set_kwargs_defaults()
             self.args = Namespace(**self.kwargs)
+
         else:
             self._set_up_parser()
 
+    def _run_program_proper(self) -> None:
+        """ moves the program logic away from __init__ for organizational purposes"""
         self._set_up_logger()
         self._ask_for_pw_if_type_is_sql()
-        self.log.debug(M.LOG_START_SCRAPER)
-
+        self.log.info(M.LOG_START_SCRAPER)
         self._read_sitemaps()
 
         if self._check_if_arg_is_a_cat():
-            self.log.info(M.LOG_CATEGORY_FOUND_DEBUG.format(cats=self.args.cats))
-            self._set_up_sql_tables()
+            if self.args.all:
+                self.log.info("Scraping all companies")
+            else:
+                self.log.info(M.LOG_CATEGORY_FOUND_DEBUG.format(cats=self.args.cats))
+
+            # if not self.args.resume:
+                # if the scraper is run for the first time
+                # self._set_up_sql_tables()
 
             self.scraper_interface = BBBScraperInterface(args=self.args, logger=self.log,
-                                                         cats=self._cats, conn=self.connection,
-                                                         password=self.pw)
+                                                         cats=self._cats, engine=self.engine)
 
             self.scraper_interface.run()
 
@@ -66,7 +72,6 @@ class BBBScraper:
                 self.log.info(M.LOG_YELP)
                 BBBYRInterface.connect()
 
-            self.connection.close()
         else:
             self.log.critical(M.LOG_CATS_NOT_FOUND.format(self.args.cats))
             raise LookupError(M.LOG_CATS_NOT_FOUND.format(self.args.cats))
@@ -92,7 +97,7 @@ class BBBScraper:
         the logger also prints output in the terminal
         """
         self.log = logging.getLogger('bbbscraper')
-        self.log.setLevel(logging.DEBUG)
+        self.log.setLevel(logging.INFO)
 
         file_handler = logging.FileHandler(self.args.log)
         file_handler.setLevel(logging.WARNING)
@@ -115,36 +120,43 @@ class BBBScraper:
 
     def _check_if_arg_is_a_cat(self) -> bool:
         """ checks if the input argument is one of the categories """
-        return True if " ".join(self.args.cats) in self._cats else False
+        if self.args.all:
+            return True
+        else:
+            return True if " ".join(self.args.cats) in self._cats else False
 
     def _ask_for_pw_if_type_is_sql(self) -> None:
         if self.args.type == "SQL":
-            self.log.debug(M.LOG_ASKING_FOR_SQL_PASSWORD)
+            self.log.info(M.LOG_ASKING_FOR_SQL_PASSWORD)
 
             if TESTING:
                 self.pw = ICFG.ZEMMY_PW
             else:
                 self.pw = getpass(M.ENTER_SQL_PASSWORD)
 
-            self.connection = pymysql.connect(host=ICFG.SQL_HOST, user=ICFG.SQL_USER,
-                                              passwd=self.pw, db=ICFG.SQL_DB)
+            self.engine = BBBSQLSetup.create_sql_engine()
+            BBBSQLSetup.check_schema(self.engine)
+            # BBBSQLSetup.create_tables(self.engine)
 
-    def _set_up_sql_tables(self) -> None:
-        if self.args.type == "SQL":
-            self._cursor = self.connection.cursor()
-            _file = ICFG.BBBORG_SQL_FILE
+            # self.connection = pymysql.connect(host=ICFG.SQL_HOST, user=ICFG.SQL_USER,
+            #                                   passwd=self.pw, db=ICFG.SQL_DB)
 
-            if path.isfile(_file) is False:
-                raise FileNotFoundError(M.SQL_FILE_NOT_FOUND_ERROR)
-            else:
-                with open(_file, "r") as f:
-                    _sql_file = f.read().split(';')
-                    self.log.info(M.LOG_READING_SQL_FILE + _file)
-
-                for i in range(len(_sql_file) - 1):
-                    self.log.debug(M.LOG_EXECUTING_SQL_DEBUG.format(query=''.join(list(_sql_file[i])[:40])).strip())
-                    self._cursor.execute(_sql_file[i])
-                self.connection.commit()
+    # def _set_up_sql_tables(self) -> None:
+    #     if self.args.type == "SQL":
+    #         self._cursor = self.connection.cursor()
+    #         _file = ICFG.BBBORG_SQL_FILE
+    #
+    #         if path.isfile(_file) is False:
+    #             raise FileNotFoundError(M.SQL_FILE_NOT_FOUND_ERROR)
+    #         else:
+    #             with open(_file, "r") as f:
+    #                 _sql_file = f.read().split(';')
+    #                 self.log.info(M.LOG_READING_SQL_FILE + _file)
+    #
+    #             for i in range(len(_sql_file) - 1):
+    #                 self.log.debug(M.LOG_EXECUTING_SQL_DEBUG.format(query=''.join(list(_sql_file[i])[:40])).strip())
+    #                 self._cursor.execute(_sql_file[i])
+    #             self.connection.commit()
 
     def _set_kwargs_defaults(self) -> None:
         if 'log' not in self.kwargs.keys():
@@ -159,8 +171,10 @@ class BBBScraper:
             self.kwargs['all'] = False
         if 'verbose' not in self.kwargs.keys():
             self.kwargs['verbose'] = True
-        if  'yelp' not in self.kwargs.keys():
+        if 'yelp' not in self.kwargs.keys():
             self.kwargs['yelp'] = False
+        if 'continue' not in self.kwargs.keys():
+            self.kwargs['resume'] = False
 
     def _set_default_args(self) -> None:
         """ for use with the default flag """

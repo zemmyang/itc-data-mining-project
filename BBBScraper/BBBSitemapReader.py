@@ -67,12 +67,62 @@ class BBBSitemapReader:
         return self._read_categories_from_sitemaps()
 
 
-def test():
-    accredited_in_the_us = BBBSitemapReader("US", False)
-    cat_length = accredited_in_the_us.get_length_of_categories()
-    assert cat_length == 2343
-    print(f'Testing done. There are {cat_length} categories found')
+def read_all_sitemaps(get_accredited: bool, get_page=0):
+    """
+    get all the companies using the sitemaps. get_page is used for batch processes.
+    set it to -1 to get everything. returns a list of the companies in BBB
+    """
+    robot_parser = RobotFileParser()
+    robot_parser.set_url(urljoin(ICFG.STARTING_URL, 'robots.txt'))
+    robot_parser.read()
+    site_maps = robot_parser.site_maps()
+
+    sitemap_list = [i for i in site_maps if i.find("sitemap") + 1 and i.find('business-profiles-index') + 1]
+    if not get_accredited:
+        [sitemap_list.pop(i.find("accredited")) for i in sitemap_list]
+        sitemap = sitemap_list[0]
+    else:
+        sitemap = [sitemap_list.pop(i.find("accredited")) for i in sitemap_list][0]
+
+    sitemap_pages = requests.get(sitemap, headers=r.choice(ICFG.HEADERS))
+    soup = bs(sitemap_pages.content, "lxml-xml")
+
+    pages_with_business_profiles = [i.get_text() for i in soup.find_all('loc')]
+
+    business_profile_list = []
+    if get_page == -1:
+        for page in pages_with_business_profiles:
+            business_pages = requests.get(page, headers=r.choice(ICFG.HEADERS))
+            soup = bs(business_pages.content, "lxml-xml")
+            business_profile_list.extend([i.get_text() for i in soup.find_all('loc')])
+    else:
+        page = pages_with_business_profiles[get_page]
+        business_pages = requests.get(page, headers=r.choice(ICFG.HEADERS))
+        soup = bs(business_pages.content, "lxml-xml")
+        business_profile_list.extend([i.get_text() for i in soup.find_all('loc')])
+
+    return business_profile_list
+
+
+def get_number_of_pages_of_all_sitemaps(get_accredited: bool):
+    robot_parser = RobotFileParser()
+    robot_parser.set_url(urljoin(ICFG.STARTING_URL, 'robots.txt'))
+    robot_parser.read()
+    site_maps = robot_parser.site_maps()
+
+    sitemap_list = [i for i in site_maps if i.find("sitemap") + 1 and i.find('business-profiles-index') + 1]
+    if not get_accredited:
+        [sitemap_list.pop(i.find("accredited")) for i in sitemap_list]
+        sitemap = sitemap_list[0]
+    else:
+        sitemap = [sitemap_list.pop(i.find("accredited")) for i in sitemap_list][0]
+
+    sitemap_pages = requests.get(sitemap, headers=r.choice(ICFG.HEADERS))
+    soup = bs(sitemap_pages.content, "lxml-xml")
+
+    pages_with_business_profiles = [i.get_text() for i in soup.find_all('loc')]
+    return len(pages_with_business_profiles)
 
 
 if __name__ == "__main__":
-    test()
+    print(get_number_of_pages_of_all_sitemaps(False))

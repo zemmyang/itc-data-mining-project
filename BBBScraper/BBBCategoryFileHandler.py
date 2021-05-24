@@ -36,7 +36,7 @@ class BBBCategoryFileHandler:
         self.log.debug(M.LOG_SAVING_CATEGORIES_TO_FILE)
 
         for cat in self.categories:
-            self.log.debug(f'Inserting category {cat} into the databse.')
+            self.log.debug(f'Inserting category {cat} into the database.')
             self._cursor.execute(ICFG.SQL_INSERT_CATEGORIES, cat)
 
         self._connection.commit()

@@ -40,11 +40,20 @@ class BBBCompanyFileHandler:
         for company in self.company_list:
             _company_scraper = BBBCompanyScraper(company, self.args, self.log)
             _item = _company_scraper.company_data
-            self.log.debug(f'Inserting {_item["Name"]} into the databse.')
-            self._cursor.execute(ICFG.SQL_INSERT_BUSINESS_PROFILE, (_item["Name"], _item["Alerts"],
-                                                                    _item["Address"], _item["url"], _item["Phone"],
-                                                                    _item["BBB File Opened"], _item["Type of Entity"],
-                                                                    _item["Rating"]))
+
+            _check_existence_cursor = self._connection.cursor()
+            _check_existence_cursor.execute(f'SELECT count(1) FROM bbborg.business_profile b where b.business_id = {_item["id_num"]}; ')
+            print(_check_existence_cursor.fetchone()[0])
+
+            if _check_existence_cursor.fetchone():
+                self.log.debug(f'Inserting {_item["id_num"], _item["Name"]} into the database.')
+                self._cursor.execute(ICFG.SQL_INSERT_BUSINESS_PROFILE, (_item["id_num"],
+                                                                        _item["Name"], _item["Alerts"],
+                                                                        _item["Address"], _item["url"], _item["Phone"],
+                                                                        _item["BBB File Opened"], _item["Type of Entity"],
+                                                                        _item["Rating"]))
+            else:
+                self.log.info(f'Duplicate found for {_item["id_num"], _item["Name"]}. Skipping...')
         self._connection.commit()
         self.log.debug(M.LOG_COMMIT_EXECUTE)
 

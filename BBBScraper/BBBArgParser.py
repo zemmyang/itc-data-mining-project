@@ -10,6 +10,7 @@ def define_optional_args(parser: ArgumentParser) -> None:
     parser.add_argument("-t", "--type", type=str, help=M.TYPE_HELP, default='SQL')
     parser.add_argument('-d', '--default', help=M.DEFAULT_HELP, action="store_true")
     parser.add_argument('-y', '--yelp', help=M.YELP_HELP, action='store_true')
+    parser.add_argument('-r', '--resume', help=M.CONTINUOUS_HELP, action='store_true')
 
 
 def define_required_args(parser: ArgumentParser) -> None:
@@ -54,7 +55,3 @@ def check_if_config_is_used(args: Namespace) -> None:
 
     else:
         print(M.NO_CONFIG_USED)
-
-
-def assign_defaults():
-    pass

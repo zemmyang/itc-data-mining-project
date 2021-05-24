@@ -9,13 +9,14 @@ LOG_FORMAT = \
 
 STARTING_URL = 'https://www.bbb.org/'
 BBBORG_SQL_FILE = 'bbborg.sql'  # make sure this is in root, not in bbbscraper directory
+BBBORG_JSON_FILE = 'bbbscraper.json'
 SQL_HOST = 'localhost'
 SQL_USER = 'root'
 SQL_DB = 'bbborg'
 
 REGEX_PAGE_X_OF_Y = r'((Page)\s\d+\s(of)\s\d+)'
 REGEX_SHOWING_X_RESULTS = r'((Showing:)\s\d+\s(results))'
-REGEX_GET_IDNUM_FROM_URL = r'(\d+-\d+)'
+REGEX_GET_IDNUM_FROM_URL = r'(\/..\/..\/)|(\d+-\d+)'
 
 # headers
 HEADERS = [{
@@ -44,8 +45,8 @@ BS4_HTML_PARSER = 'html.parser'
 ZEMMY_PW = 'd4rth!x3mnas'
 
 SQL_INSERT_BUSINESS_PROFILE = """
-INSERT INTO `business_profile` (business_name, alerts, location, website, phone_number, bbb_file_opened, type_of_entity, bbb_rating)
-VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+INSERT INTO `business_profile` (business_id, business_name, alerts, location, website, phone_number, bbb_file_opened, type_of_entity, bbb_rating)
+VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)
 """
 
 SQL_INSERT_CATEGORIES = """
